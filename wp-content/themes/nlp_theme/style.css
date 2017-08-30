@@ -244,14 +244,15 @@ body{
 
 .rainbow_container{
     width: 100%;
-    height: .5rem;
+    height: 0rem;
     overflow: hidden;
     background: #FBFBFB;
     transition: height 200ms ease-in 0s;
+    position: relative;
 }       
 
 .rainbow_container.animateOverlay{
-  height: calc(100vh - 64px);
+  height: calc(100vh - 4.92rem);
   transition: height 400ms ease-out 0s;
 } 
 
@@ -286,12 +287,14 @@ transform: translateY(3px) rotate(0deg);
 /*////////////////////  OVERLAY CONTENT //////////////////////*/
 
 .overlay_container{
-  float: right;
-  text-align: right;
+
   display: inline-block;
-  padding-top: 9.85rem;
   width: 100%;
-  float: right;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+
 }
 
 .overlay_item a{
@@ -344,13 +347,17 @@ transform: translateY(3px) rotate(0deg);
 }
 
 .header_container{
-  height: 4.92rem}
+  height: 4.92rem;
+  position:relative;
+}
 
 .logo{
     float: left;
     height: auto;
     overflow: hidden;
-    padding: 1.3rem 0rem;
+    position: absolute;
+    top:50%;
+    transform: translate(0%,-50%);
 }
 
 .logo img{
@@ -463,10 +470,10 @@ div#container {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .item {
-  width: 255px;
   height: 255px;
   display: inline-block;
   margin-bottom: 20px;
@@ -477,10 +484,17 @@ div#container {
   position: relative;
 }
 
-.item.w2 { width: 530px; height: 255px; }
-.item.h2 { width: 530px; height: 530px; }
-.item.h2_2 { width: 255px; height: 530px; }
-.item.full { width: 1060px; height: 530px;}
+.item.w2 { 
+  float: left;
+  width: 50%; 
+  height: 255px; 
+}
+
+.item.w2:nth-child(odd) { 
+  margin-right:0%; 
+}
+
+.item.full { width: 100%; height: 530px;}
 
 .isotope-item {
   z-index: 2;
@@ -693,7 +707,6 @@ figure.hover_box:hover p {
 /*//////////////////// HERO  //////////////////////*/
 
 .hero_home{
-  position: absolute;
   width: 100%;
   height: 100%;
   color: #282828;
@@ -908,7 +921,7 @@ letter-spacing: 2px;
 }
 
 .h2_port{
-  width: 49%; 
+  width: 50%; 
   height: 530px;
 }
 

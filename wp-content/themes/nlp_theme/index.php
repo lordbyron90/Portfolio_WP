@@ -4,19 +4,20 @@
 
 <div class="full_wrapper">
 	<div class="main_container">
-		    <section id="container" class="pfolio_grid">
 
-				<div class="item full">
-					<div class="hero_home">
-						<div class="icon_hero">
-							<img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/min_noellago_logo_black-01.png" alt="">
-						</div>
-						<div class="intro_home">
-							i'm noel lago. <span> a minimalistic visual designer.</span>
-						</div>
-						<div class="second_par">& this space has been left deliberately empty.</div>
-					</div> <!-- End of hero home-->
-				</div><!-- End of item-->
+			<div class="full">
+				<div class="hero_home">
+					<div class="icon_hero">
+						<img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/min_noellago_logo_black-01.png" alt="">
+					</div>
+					<div class="intro_home">
+						i'm noel lago. <span> a minimalistic visual designer.</span>
+					</div>
+					<div class="second_par">& this space has been left deliberately empty.</div>
+				</div> <!-- End of hero home-->
+			</div><!-- End of item-->
+	
+		    <section id="container" class="pfolio_grid">
 
 				<?php
 
