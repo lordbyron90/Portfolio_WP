@@ -1,3 +1,4 @@
+$ = jQuery;
 $(document).ready(function(){
 
   	if( $(".pfolio_grid").length ){
@@ -36,12 +37,14 @@ $(document).ready(function(){
 		}
 
 
-		if( $windowW > 965){
+		if( $windowW > 1070){
 			console.log($windowW);
 			if ( $(".column_text").length ){
 
 				var element = $(".column_text"),
 					originalY = element.offset().top;
+
+				element.css("position", "relative");
 
 				var navHeight = $(".main_header").outerHeight();
 
@@ -68,25 +71,13 @@ $(document).ready(function(){
 				});  
 
 			}
-		}else{
+		}
+		if( $windowW < 1070){
 			if ( $(".column_text").length ){
-				console.log("ddede");
-				$(window).on('scroll', function(event) {
-			    	var scrollTop = $(window).scrollTop();	
-					var topDistance = 0;
-					var element = $(".column_text"),
-					originalY = element.offset().top;
-
-				    element.css('top',0);
-
-
-
-				}); 
-
-
+				var element = $(".column_text");
+				element.css("position", "static");
 			}
 		}
-
 
 	};
 
@@ -106,60 +97,17 @@ $(document).ready(function(){
 
 	}	
 
-/*
-  if( $(".pfolio_grid").length() ){
-	 var $windowW = $(window).width();
-	  if( $windowW <  706){
-	  	$container.isotope('destroy');
-	  	$(".item").removeClass('h2');
-	  	$(".item").removeClass('w2');
-	  	$(".item").removeClass('h2_2');
-
-		var $container = $('#container'),
-			item = 255;
-
-			$container.isotope({
-				itemSelector: '.item',
-				masonry: {
-					columnWidth: item,
-					isFitWidth: true,
-					gutter: 20
-				}
-			});
-		}else{
-			$(".pfolio_grid:nth-child(1)").addClass('h2');
-			$(".pfolio_grid:nth-child(1)").addClass('h2');
-			$(".pfolio_grid:nth-child(1)").addClass('h2');
-			$(".pfolio_grid:nth-child(1)").addClass('h2');
-			$(".pfolio_grid:nth-child(1)").addClass('h2');
-			$(".item").addClass('w2');
-			$(".item").addClass('h2_2');
-
-			var $container = $('#container'),
-				item = 255;
-
-			$container.isotope({
-				itemSelector: '.item',
-				masonry: {
-					columnWidth: item,
-					isFitWidth: true,
-					gutter: 20
-				}
-			});
-		}  	
-  }
-*/
-
-
 
 //FOLLOW SCROLL
 
-		if( $windowW > 965){
+		if( $windowW > 1070){
 			console.log($windowW);
 			if ( $(".column_text").length ){
 
 				var element = $(".column_text"),
 					originalY = element.offset().top;
+
+				element.css("position", "relative");
 
 				var navHeight = $(".main_header").outerHeight();
 
@@ -180,29 +128,13 @@ $(document).ready(function(){
 				    element.stop(false, false).animate({
 			        	top:topDistance
 				    }, 350, 'swing');
-
-
-
 				});  
-
 			}
-		}else{
+		}
+		if( $windowW < 1070){
 			if ( $(".column_text").length ){
-				console.log("jjj");
-				console.log("ddede");
-				$(window).on('scroll', function(event) {
-			    	var scrollTop = $(window).scrollTop();	
-					var element = $(".column_text"),
-					originalY = element.offset().top;					var topDistance = 0;
-
-
-				    element.css('top',0);
-
-
-
-				}); 
-
-
+				var element = $(".column_text");
+				element.css("position", "static");
 			}
 		}
     
