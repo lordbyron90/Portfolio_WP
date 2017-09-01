@@ -93,18 +93,18 @@ BIBLIOTECAS JS
 // WP ya trae una preinstalación de jQuery. Simplemente tenemos que activarla y definir la secuencia en la que se cargarán los scripts
 
 function encolamiento_scripts() {
-	// Nos aseguramos que no estamos en el panel de admin
-	if (!is_admin()) {
+  // Nos aseguramos que no estamos en el panel de admin
+  if (!is_admin()) {
 
-		//Llamamos a jQuery
-		wp_enqueue_script('jquery');
+    //Llamamos a jQuery
+    wp_enqueue_script('jquery');
+    
+    //llamamos a otras librerías y nuestro js
+    wp_enqueue_script('nl_isotope', get_stylesheet_directory_uri() . '/js/isotope.3.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('nl_scrollreveal', get_stylesheet_directory_uri() . '/js/scrollreveal.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('nl_mainjs', get_stylesheet_directory_uri() . '/js/index.js', array('nl_isotope', 'jquery'), '1.0', true);
 
-		// Cargamos el plugin royalSlider y definimos: como lo llamaremos (handle = 'royalSlider', su url, los complementos que necesita para funcionar (array('handle'), la versión y el lugar donde se cargará (false->wp_head; true->wp_footer())))
-		wp_enqueue_script('royalSlider', get_bloginfo('template_url') . '/royalslider/jquery.royalslider.min.js', array('jquery'), '1.0', true);
-
-		// Hacemos lo mismo con nuestra app
-		wp_enqueue_script('app', get_bloginfo('template_url') . '/js/app.js', array('jquery'), '1.0', true);
-	}
+  }
 }
 
 // Hook. Vinculamos la acción encolamiento_scripts al inicio de WordPress
@@ -261,8 +261,39 @@ En las páginas de la plantilla que queramos que contengan el código, bastará 
 do_shortcode( '[form_sc]' );
 */
 
+/****************
 
+FOOTER SPECIFIC
 
+*****************
+function projectsFooter() { 
+  global $post;
+  if (is_single($post->ID) && in_category('projects.', $post->ID)) {
+?>
+  <script>
+      (function(){
+
+        var config = {
+          viewFactor : 0.15,
+          duration   : 800,
+          distance   : "0px",
+          reset: false,
+          scale      : 0.8,
+          mobile: true,
+          useDelay: 'always',
+          viewFactor: 0.1
+        }
+
+        window.sr = new ScrollReveal(config)
+        sr.reveal('.item', { container: '.portfolio_container' });
+
+      })();
+    </script> 
+<?php 
+  }
+}
+add_action('wp_footer', 'projectsFooter'); 
+*/
 
 /****************
 

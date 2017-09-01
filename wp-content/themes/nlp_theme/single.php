@@ -66,6 +66,14 @@
 
 		</article>
 	
+	<?php
+	/*
+		//debug cat ID
+		$categories = get_the_category();
+		$category_id = $categories[0]->cat_ID;
+		echo "id: ".$category_id;
+	*/
+	?>
 
 
 <?php include ('includes/footer.php'); ?>
