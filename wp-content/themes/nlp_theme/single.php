@@ -35,6 +35,12 @@
 				<?php $im_pr_4= get_field('imagen_proyecto_4'); ?>
 				<?php $im_pr_5= get_field('imagen_proyecto_5'); ?>
 				<?php $im_pr_6= get_field('imagen_proyecto_6'); ?>
+				<?php $im_pr_7= get_field('imagen_proyecto_7'); ?>
+				<?php $im_pr_8= get_field('imagen_proyecto_8'); ?>
+				<?php $im_pr_9= get_field('imagen_proyecto_9'); ?>
+				<?php $im_pr_10= get_field('imagen_proyecto_10'); ?>
+				<?php $im_pr_11= get_field('imagen_proyecto_11'); ?>
+				<?php $im_pr_12= get_field('imagen_proyecto_12'); ?>
 
 				<div class="photo_container_page">
 					<img src="<?php echo $im_pr_1['url'] ?>" alt="<?php the_field('alt_imagen_1') ?>"/>
@@ -58,6 +64,30 @@
 
 				<div class="photo_container_page">
 					<img src="<?php echo $im_pr_6['url'] ?>" alt="<?php the_field('alt_imagen_6') ?>"/>
+				</div>
+
+				<div class="photo_container_page">
+					<img src="<?php echo $im_pr_7['url'] ?>" alt="<?php the_field('alt_imagen_7') ?>"/>
+				</div>
+
+				<div class="photo_container_page">
+					<img src="<?php echo $im_pr_8['url'] ?>" alt="<?php the_field('alt_imagen_8') ?>"/>
+				</div>
+
+				<div class="photo_container_page">
+					<img src="<?php echo $im_pr_9['url'] ?>" alt="<?php the_field('alt_imagen_9') ?>"/>
+				</div>
+
+				<div class="photo_container_page">
+					<img src="<?php echo $im_pr_10['url'] ?>" alt="<?php the_field('alt_imagen_10') ?>"/>
+				</div>
+
+				<div class="photo_container_page">
+					<img src="<?php echo $im_pr_11['url'] ?>" alt="<?php the_field('alt_imagen_11') ?>"/>
+				</div>
+
+				<div class="photo_container_page">
+					<img src="<?php echo $im_pr_12['url'] ?>" alt="<?php the_field('alt_imagen_12') ?>"/>
 				</div>
 			</div>
 	

@@ -23,55 +23,27 @@ Template Name: Stuff
 			$args =array(
 				'post_type'		=>	'design_music_digest, photo_review, quote_digest',
 				'orderby'		=>	'date',
+				'posts_per_page'=>	-1,
 				);
 
-			$stuff = new WP_Query($args);
-			if ($stuff->have_posts()): while($stuff->have_posts()): $stuff->the_post();
-			?>
+			$stuff = new WP_Query ($args);
+			if ($stuff->have_posts()): while ($stuff->have_posts()): $stuff->the_post();
+		?>
 
-				<?php 
+			<?php 
 				if(get_post_type()=='design_music_digest'){
-					echo 
-					'<section class="spotify_blog_container blog_container_gap">
-						<div class="spotify_content">
-							<iframe class="spotify_api" src="https://open.spotify.com/embed/track/36FaicbcQqoLXBBqTW76Zk" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
-
-							<div class="spotify_content_desc">
-								<p class="spotify_title">designers music digest #1</p>
-								<p class="spotify_song">Reflektor | Arcade Fire</p>
-								<p class="spotify_date">12 | 06 | 1990</p>
-							</div>
-						</div>
-					</section>'
-
+					 include ('single-design_music_digest.php');
 
 				}elseif(get_post_type()=='photo_review'){
-					echo 
-					'<section class="photo_blog_container blog_container_gap">
-						<div class="photo_container">
-							<img src="images/monocolor-3.jpg" alt="">
-							<img src="images/monocolor-2.jpeg" alt="">
-						</div>
-
-						<p class="photo_comment_blog">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, expedita magni dicta, debitis porro autem veritatis consequatur non nobis iure necessitatibus dolorum vero recusandae iste ullam cum architecto culpa? Unde.</p>
-						<p class="place_blog">Reijkavik (Iceland)</p>
-						<p class="date_blog">12 | 06 | 1990</p>
-					</section>'
-
+					 include ('single-photo_review.php'); 
 
 				}else(get_post_type()=='photo_review'){
-					echo
-					'<section class="quote_blog_container blog_container_gap">
-						<p class="quote_blog">Only two things are infinite, the universe and human stupidity, and Im not sure about the former.</p>
-
-						<p class="author_blog">Albert Einstein</p>
-						<p class="date_blog">12 | 06 | 1990</p>
-					</section>'
+					 include ('single-quote_digest.php'); 
 				}
+			?>
 
-				?>
-
-		<?php endwhile; endif; wp_reset_postdata(); ?>
+		<?php endwhile; endif;?>
+		<?php wp_reset_postdata(); ?>
 
 		</div>
 
