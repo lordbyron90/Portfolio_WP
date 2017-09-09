@@ -4,7 +4,8 @@
 	
 		<div class="main_container">
 
-			<p class="presentation">here is where i share my stuff. <span>but just the good one.</span></p>
+			<div class="intro_home">here is where i share my stuff.</div> 
+			<div class="second_par">but just only the good one.</div>
 		
 
 			<section class="portfolio_container">
@@ -23,10 +24,11 @@
 									<h2 class="title_box"><?php the_title() ?><span><?php the_field('segundo_titulo') ?></span></h2>
 									<div class="tag_box"><?php the_field('project_tag') ?></div>
 								</div>
+								<div class="line_icon">
+									<div class="box_icon"><img src="<?php echo $icon['url'] ?>" alt="Imagen"></div>									
+								</div>
 							</figcaption>			
 						</figure>
-						<div class="line_icon"></div>
-						<div class="box_icon"><img src="<?php echo $icon['url'] ?>" alt="Imagen"></div>
 					</a>
 			  	</article>
 

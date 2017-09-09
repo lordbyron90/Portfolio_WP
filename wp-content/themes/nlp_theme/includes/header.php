@@ -3,8 +3,9 @@
 <head>
 	<meta charset="<?php bloginfo('charset') ?>">
 	<title><?php bloginfo('name') ?></title>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/style.css?v=dsdsdss">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/style.css?">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="http://localhost:8888/nlp_/wp-content/uploads/2017/09/ICON_animation.gif" type="image/gif" >
 </head>
 <body <?php body_class() ?>>
 
@@ -34,7 +35,7 @@
 		</nav> -->
 		<div class="main_container header_container">
 			<h1 class="logo">
-				<a href="/"><img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/Mesa-de-trabajo-6-copia-3.svg" alt="Noel Lago Logo"></a>
+				<a href="/nlp_"><img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/Mesa-de-trabajo-6-copia-3.svg" alt="Noel Lago Logo"></a>
 			</h1>
 
 			<div class="burger_menu">

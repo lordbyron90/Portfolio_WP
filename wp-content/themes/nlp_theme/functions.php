@@ -9,7 +9,6 @@ Imágenes
 add_theme_support( 'post-thumbnails' );
 
 
-
 // Añade tamaños personalizados a WordPress
 add_image_size ( 'hero', 1440, 625, array('center','center') );
 

@@ -1,6 +1,4 @@
 <section class="photo_blog_container blog_container_gap">
-	
-	<?php if( have_posts() ): while( have_posts() ): the_post(); ?>	
 
 	<?php $im_1= get_field('imagen_1'); ?>
 	<?php $im_2= get_field('imagen_2'); ?>
@@ -23,6 +21,4 @@
 	<div class="place_blog"><?php the_field('city') ?></div>
 	<div class="date_blog"><?php echo get_the_date(); ?></div>
 
-	<?php endwhile; ?> 
-	<?php endif ?>
 </section>

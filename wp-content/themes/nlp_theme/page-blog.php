@@ -21,7 +21,7 @@ Template Name: Stuff
 
 		<?php
 			$args =array(
-				'post_type'		=>	'design_music_digest, photo_review, quote_digest',
+				'post_type'		=>	array('quote_digest', 'design_music_digest','photo_review'),
 				'orderby'		=>	'date',
 				'posts_per_page'=>	-1,
 				);
@@ -31,15 +31,16 @@ Template Name: Stuff
 		?>
 
 			<?php 
-				if(get_post_type()=='design_music_digest'){
+				if(get_post_type()==='design_music_digest'){
 					 include ('single-design_music_digest.php');
 
-				}elseif(get_post_type()=='photo_review'){
-					 include ('single-photo_review.php'); 
-
-				}else(get_post_type()=='photo_review'){
+				}if(get_post_type()==='quote_digest'){
 					 include ('single-quote_digest.php'); 
 				}
+				elseif(get_post_type()==='photo_review'){
+					 include ('single-photo_review.php'); 
+
+				}				
 			?>
 
 		<?php endwhile; endif;?>

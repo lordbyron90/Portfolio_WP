@@ -8,10 +8,10 @@ $(document).ready(function(){
 		$container.isotope({
 			itemSelector: '.item',
 			masonry: {
-				columnWidth: item,
-				percentPosition: true,
-				 isFitWidth: false,
-				 gutter: 0
+				columnWidth: '.item'
+				//percentPosition: true,
+				//isFitWidth: false,
+				//gutter: 0
 			}
 		});
 	}
@@ -19,7 +19,7 @@ $(document).ready(function(){
 	var $windowW = $(window).width();
 	var defaultLogo = $('.logo img').attr('src');
 	var wpLogoSmall = 'http://localhost:8888/nlp_/wp-content/uploads/2017/08/min_noellago_logo-01.png';
-	if( $windowW <  710){	
+	if( $windowW <  768){	
 	  	$('.logo img').attr('src', wpLogoSmall);
 	}else{
 	  	$('.logo img').attr('src', defaultLogo	);
@@ -30,14 +30,14 @@ $(document).ready(function(){
 
 		var $windowW = $(window).width();
 
-		if( $windowW <  710){	
+		if( $windowW <  768){	
 		  	$('.logo img').attr('src', wpLogoSmall);
 		}else{
 		  	$('.logo img').attr('src', defaultLogo	);
 		}
 
 
-		if( $windowW > 1070){
+		if( $windowW > 768){
 			console.log($windowW);
 			if ( $(".column_text").length ){
 
@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 			}
 		}
-		if( $windowW < 1070){
+		if( $windowW < 768){
 			if ( $(".column_text").length ){
 				var element = $(".column_text");
 				element.css("position", "static");
@@ -85,22 +85,21 @@ $(document).ready(function(){
 //OVERLAYED MENU
 	//overlayed menu
 	var $windowW = $(window).width();
-	if( $windowW > 1070){
 
-	  	$('.burger_menu').on('click', function() {
-	  	var _this = $(this);
-	    	$('.rainbow_container').toggleClass('animateOverlay');
-	      	$('.main_header').css('height','auto');
-	      	_this.toggleClass('open');
-	      	$('body').toggleClass(' 	block_scroll');
-	  	});
+  	$('.burger_menu').on('click', function() {
+  	var _this = $(this);
+    	$('.rainbow_container').toggleClass('animateOverlay');
+      	$('.main_header').css('height','auto');
+      	_this.toggleClass('open');
+      	$('body').toggleClass(' 	block_scroll');
+  	});
 
-	}	
+	
 
 
 //FOLLOW SCROLL
 
-		if( $windowW > 1070){
+		if( $windowW > 768){
 			console.log($windowW);
 			if ( $(".column_text").length ){
 
@@ -131,7 +130,7 @@ $(document).ready(function(){
 				});  
 			}
 		}
-		if( $windowW < 1070){
+		if( $windowW < 768){
 			if ( $(".column_text").length ){
 				var element = $(".column_text");
 				element.css("position", "static");
