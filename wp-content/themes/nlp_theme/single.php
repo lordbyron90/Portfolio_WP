@@ -13,11 +13,11 @@
 				
 				<div class="cont_page"><?php the_content() ?></div>
 
-				<div class="tag_page">Date<span><?php the_field('fecha_de_creacion') ?></span></div>
+				<div class="tag_page">date<span><?php the_field('fecha_de_creacion') ?></span></div>
 
-				<div class="tag_page">Client<span><?php the_field('cliente') ?></span></div>
+				<div class="tag_page">client<span><?php the_field('cliente') ?></span></div>
 
-				<div class="tag_page">Category<span><?php the_field('project_tag') ?></span></div>
+				<div class="tag_page">category<span><?php the_field('project_tag') ?></span></div>
 
 			<?php endwhile; ?> 
 			<?php endif ?>

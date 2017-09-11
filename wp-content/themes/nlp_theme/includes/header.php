@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo('charset') ?>">
 	<title><?php bloginfo('name') ?></title>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/style.css?">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/style.css?v=kjlfs">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="http://localhost:8888/nlp_/wp-content/uploads/2017/09/ICON_animation.gif" type="image/gif" >
 </head>

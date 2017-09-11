@@ -3,7 +3,7 @@
 	<div class="quote_blog"><?php the_content('') ?></div>
 
 	<div class="author_blog"><?php the_field('autor') ?></div>
-	<div class="date_blog"><?php echo get_the_date(); ?></div>
+	<div class="date_blog"><?php the_field('fecha') ?></div>
 
 
 </section>

@@ -10,9 +10,9 @@ Template Name: Stuff
 
 		<div class="main_container">
 
-			<h1 class="icon_hero"><img src="images/min_circle_black.svg" alt=""></h1>
+			<h1 class="icon_hero"><img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/min_noellago_logo_black-01-1.png" alt=""></h1>
 
-			<p class="intro_home">here is where i share my reflections</p>
+			<p class="intro_home">here is where i share my reflections.</p>
 
 			<p class="second_par">feel free to inquire how my mind works.</p>
 
@@ -21,7 +21,7 @@ Template Name: Stuff
 
 		<?php
 			$args =array(
-				'post_type'		=>	array('quote_digest', 'design_music_digest','photo_review'),
+				'post_type'		=>	array('quote_digest', 'design_article','photo_review'),
 				'orderby'		=>	'date',
 				'posts_per_page'=>	-1,
 				);
@@ -31,8 +31,8 @@ Template Name: Stuff
 		?>
 
 			<?php 
-				if(get_post_type()==='design_music_digest'){
-					 include ('single-design_music_digest.php');
+				if(get_post_type()==='design_article'){
+					 include ('single-design_article.php');
 
 				}if(get_post_type()==='quote_digest'){
 					 include ('single-quote_digest.php'); 
