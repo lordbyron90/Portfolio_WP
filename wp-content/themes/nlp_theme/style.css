@@ -484,14 +484,14 @@ div#container {
   box-shadow:none;
   transition: box-shadow 1s;
   overflow: hidden;
-    width: 50%; 
-
+  width: 50%; 
   position: relative;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAH0lEQVQoU2NkYGD4z8DAwMhAABBUANM/qhBvSBIdPACgdAELiyknowAAAABJRU5ErkJggg==) repeat;  
 }
 
 .item.w2 { 
   float: left;
-  height: 255px; 
+  height: 255px;
 }
 
 .item.w2:nth-child(odd) { 
@@ -637,7 +637,7 @@ figcaption {
 }
 
 .line_icon{  
-  background: rgba(251, 251, 251, .5);
+  background: rgba(251, 251, 251, .8);
   position: absolute;
   bottom: -3.21rem;
   z-index: 1;
@@ -664,7 +664,7 @@ figcaption {
 }
 
 figure img{
-  opacity: .50;
+  opacity: .1;
   transition: opacity 0.35s, transform 0.35s;
   transform: scale(1);  
 }
@@ -1100,6 +1100,7 @@ letter-spacing: 2px;
 
 .photo_container img{
   padding-bottom: 1.43rem;
+  margin: 0 auto;
 }
 
 .article_content_blog{

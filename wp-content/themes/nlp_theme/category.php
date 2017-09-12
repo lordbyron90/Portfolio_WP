@@ -1,12 +1,23 @@
 <?php include ('includes/header.php'); ?>
 
 	<div class="full_wrapper">
-	
 		<div class="main_container">
 
-			<div class="intro_home">here is where i share my stuff.</div> 
-			<div class="second_par">but just only the good one.</div>
-		
+			<?php
+
+				$args = array(
+					'post_type'		=>'isolated_sentences',
+					'posts_per_page'=>1,
+					);
+				$consulta =new WP_Query ($args);
+				if($consulta->have_posts()): while ($consulta->have_posts()): $consulta->the_post();
+			?>
+
+			<div class="intro_home"><?php the_field('category_first') ?></div> 
+			<div class="second_par"><?php the_field('category_second') ?></div>
+
+			<?php endwhile;endif;?>
+		  		<?php wp_reset_postdata(); ?>
 
 			<section class="portfolio_container">
 				<?php if(have_posts()): ?>
@@ -34,25 +45,6 @@
 
 				<?php endwhile; ?> 
 				<?php endif ?>
-
-
-				<!-- <article class="item h2_port right_column">
-				  	<a href="">
-					  	<figure class="hover_box">
-							<img src="images/bird.png" alt=""/>
-							<figcaption>
-								<div class="text_box">
-									<h2 class="title_box">swatch<span>2016</span></h2>
-									<p class="tag_box">branding editorial</p>
-								</div>
-							</figcaption>			
-						</figure>
-						<div class="line_icon"></div>
-						<div class="box_icon"><img src="images/power.svg" alt=""></div>
-					</a>
-				</article> -->
-
-
 			</section>
 
 <?php include ('includes/footer.php'); ?>
