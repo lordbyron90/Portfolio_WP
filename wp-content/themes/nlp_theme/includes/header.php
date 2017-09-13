@@ -24,18 +24,20 @@
 
 		?>
 
-
-		<!-- <nav class="rainbow_container">
-		<ul class="overlay_container">
-		<li class="overlay_item main_container gradient_hover_black"><a href="">home.</a></li>
-		/<li class="overlay_item main_container gradient_hover_black"><a href="">projects.</a></li>
-		<li class="overlay_item main_container gradient_hover_black"><a href="">blog.</a></li>
-		<li class="overlay_item main_container gradient_hover_black"><a href="">contact.</a></li>
-		</ul>
-		</nav> -->
 		<div class="main_container header_container">
+
+			<?php
+				$args = array(
+					'post_type'		=>'isolated_images',
+					);
+
+				$consulta =new WP_Query ($args);
+
+				if($consulta->have_posts()): while ($consulta->have_posts()): $consulta->the_post();
+			?>
+
 			<h1 class="logo">
-				<a href="/nlp_"><img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/Mesa-de-trabajo-6-copia-3.svg" alt="Noel Lago Logo"></a>
+				<a href="/nlp_"><img src="<?php the_field('web_logo') ?>" alt="Noel Lago Logo"></a>
 			</h1>
 
 			<div class="burger_menu">
@@ -44,5 +46,7 @@
 					<div class="line_ov line_2"></div>
 				</a>
 			</div>
+			<?php endwhile;endif;?>
+		  	<?php wp_reset_postdata(); ?>
 		</div>
 	</header>

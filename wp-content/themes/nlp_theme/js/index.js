@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 	var $windowW = $(window).width();
 	var defaultLogo = $('.logo img').attr('src');
-	var wpLogoSmall = 'http://localhost:8888/nlp_/wp-content/uploads/2017/09/min_circle_black-1.svg';
+	var wpLogoSmall = 'http://localhost:8888/nlp_/wp-content/uploads/2017/09/min_black.svg';
 	if( $windowW <  768){	
 	  	$('.logo img').attr('src', wpLogoSmall);
 	}else{

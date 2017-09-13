@@ -4,26 +4,35 @@
 	<div class="main_container">
 			<div class="full">
 				<div class="hero_home">
+
 					<div class="icon_hero">
-						<img src="http://localhost:8888/nlp_/wp-content/uploads/2017/09/ICON_animation.gif" alt="">
+					<?php
+						$args = array(
+							'post_type'		=> 'isolated_images',
+							);
+						$consulta =new WP_Query ($args);
+						if($consulta->have_posts()): while ($consulta->have_posts()): $consulta->the_post();
+					?>
+						<img src="<?php the_field('hero_logo') ?>" alt="hero_logo">
+					<?php endwhile;endif;?>
+		  			<?php wp_reset_postdata(); ?>	
 					</div>
 
-				<?php
-
-					$args = array(
-						'post_type'		=>'isolated_sentences',
-						'posts_per_page'=>1,
-						);
-					$consulta =new WP_Query ($args);
-					if($consulta->have_posts()): while ($consulta->have_posts()): $consulta->the_post();
-				?>
+					<?php
+						$args = array(
+							'post_type'		=> 'isolated_sentences',
+							);
+						$consulta =new WP_Query ($args);
+						if($consulta->have_posts()): while ($consulta->have_posts()): $consulta->the_post();
+					?>
 
 					<div class="intro_home"><?php the_field('index_intro') ?></div>
 					<div class="second_par"><?php the_field('index_second') ?></div>
+					<?php endwhile;endif;?>
+		  			<?php wp_reset_postdata(); ?>
 				</div>
 
-				<?php endwhile;endif;?>
-		  		<?php wp_reset_postdata(); ?>
+				
 			</div>
 		    <section id="container" class="pfolio_grid">
 

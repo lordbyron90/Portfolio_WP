@@ -65,6 +65,9 @@ table {
 }
 
 
+
+
+
 /*////////////////////  GLOBALS //////////////////////*/
 /*////////////////////  GLOBALS //////////////////////*/
 /*////////////////////  GLOBALS //////////////////////*/
@@ -120,6 +123,9 @@ html,body{
 ::-webkit-scrollbar-thumb {
     background-color: #FBFBFB;
 }
+
+
+
 
 
 
@@ -222,7 +228,7 @@ body{
 }
 
 .main_container{
-    width: 75vw; /*1080px;*/
+    width: 75vw; 
     margin: 0 auto;
     background: inherit;
 }
@@ -230,6 +236,24 @@ body{
 .block_scroll{
     overflow: hidden;
 }
+
+/*        @media only screen and (max-width: 768px){
+          .full_wrapper{
+            padding-top: 9.85rem;
+          }
+        } 
+
+
+        @media only screen and (max-width: 640px){
+          .full_wrapper{
+            padding-top: 6.08rem;
+          }
+        }*/
+
+
+
+
+
 
 /*////////////////////  RAINBOW HEADER FOOTER //////////////////////*/
 /*////////////////////  RAINBOW HEADER FOOTER //////////////////////*/
@@ -256,6 +280,10 @@ body{
   height: calc(100vh - 4.92rem);
   transition: height 400ms ease-out 0s;
 } 
+
+
+
+
 
 /*////////////////////  OVERLAY //////////////////////*/
 /*////////////////////  OVERLAY //////////////////////*/
@@ -310,6 +338,14 @@ transform: translateY(3px) rotate(0deg);
   width: 100%;
   text-align: center;
 }
+
+
+/*        @media only screen and (max-width: 640px){
+          .overlay_item{
+            font-size: 2.32rem;
+            margin-bottom: 1.875rem;
+          }
+         } */
 
         
    
@@ -406,6 +442,10 @@ transform: translateY(3px) rotate(0deg);
 
 
 
+
+
+
+
 /*////////////////////  FOOTER  //////////////////////*/
 /*////////////////////  FOOTER  //////////////////////*/
 /*////////////////////  FOOTER  //////////////////////*/
@@ -462,6 +502,85 @@ transform: translateY(3px) rotate(0deg);
   margin-left: 0rem;
 }
 
+/*      @media only screen and (max-width: 1024px){
+        .footer_li{
+          text-indent: -9000px;
+          height: 30px;
+          width: 30px;
+        } 
+
+        .i_instagram{
+          background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_instagram.svg) no-repeat center;
+          background-size: cover;
+        }
+        
+        .i_behance{
+          background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_behance.svg) no-repeat center;
+          background-size: cover;
+        }
+        
+        .i_spotify{
+          background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_spotify.svg) no-repeat center;
+          background-size: cover;
+        }
+        
+        .i_twitter{
+          background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_twitter-1.svg) no-repeat center;
+          background-size: cover;
+        }
+        
+        .gradient_hover:before {
+          background: transparent; 
+          transition: none;
+        }
+        .gradient_hover:hover, .gradient_hover:focus, .gradient_hover:active {
+          transition: none;
+        } 
+
+        .gradient_hover_black:before {
+          transition: none;
+          background: #fbfbfb; 
+        }
+        .gradient_hover_black:hover, .gradient_hover_black:focus, .gradient_hover_black:active {
+          transition: none;
+          color: #282828;    
+        } 
+
+        .ssmm_li a {
+          display: block;
+        }
+      }
+
+      @media only screen and (max-width: 768px){
+        .main_footer{
+          padding: 3.76rem 0rem 3.76rem 0rem;
+        }
+      }
+
+      @media only screen and (max-width: 640px){
+        .web_copyright{
+          float:none;
+          margin-bottom: .89rem;
+        }
+        
+        .ssmm_li{
+          float: none;
+        }
+
+        footer{
+          text-align: center;
+        }
+
+        .main_footer{
+          padding: 3.76rem 0rem 3.76rem 0rem;
+        }
+      } */
+
+
+
+
+
+
 /*////////////////////  MASONRY  //////////////////////*/
 /*////////////////////  MASONRY  //////////////////////*/
 /*////////////////////  MASONRY  //////////////////////*/
@@ -491,7 +610,7 @@ div#container {
 
 .item.w2 { 
   float: left;
-  height: 255px;
+  height: 15.93rem;
 }
 
 .item.w2:nth-child(odd) { 
@@ -561,9 +680,6 @@ div#container {
 /*////////////////////  HOME  //////////////////////*/
 /*////////////////////  HOME  //////////////////////*/ 
 
-
-/*//////////////////// PROJECT ITEMS  //////////////////////*/ 
-
 .item a{
   display: inline-block;
 }
@@ -596,37 +712,48 @@ div#container {
 
 .icon_text{
   display: block;
-  height: 25px;
-  width: 25px;
+  height: 1.43rem;
+  width: 1.43rem;
 }
 
+/*      @media only screen and (max-width: 768px){
+        .full_wrapper{
+          padding-top: 9.85rem;
+        }
+
+        .item{
+          width: 100%;
+          display: block;
+          }
+
+        #container .item.w2{
+          border-radius: 6px 6px 6px 6px;
+          margin-bottom: 1.43rem;
+        }
+       }  */
 
 
-/*////////////////////  HOVER  BOXES//////////////////////*/
-/*////////////////////  HOVER  BOXES//////////////////////*/
-/*////////////////////  HOVER  BOXES//////////////////////*/
-/*////////////////////  HOVER  BOXES//////////////////////*/
-/*////////////////////  HOVER  BOXES//////////////////////*/
-/*////////////////////  HOVER  BOXES//////////////////////*/
-/*////////////////////  HOVER  BOXES//////////////////////*/
 
 
+
+/*////////////////////  HOVER  BOXES//////////////////////*/
+/*////////////////////  HOVER  BOXES//////////////////////*/
 
 
 article.item:hover .line_icon{
   bottom: 0;
   padding: 0.89rem;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 
 article.item:hover .text_box{
   padding-left:4.92rem;
-  transition: all 0.5s;  
+  transition: all 0.5s ease-in-out;  
 }
 
 figure:hover img{
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.1) ;
 }
 
 figcaption {
@@ -644,7 +771,7 @@ figcaption {
   left: 0;
   right: 0;
   padding: 0;
-  transition: all 0.5s;  
+  transition: all 0.5s ease-in-out;  
 }
 
 .box_icon{
@@ -656,7 +783,7 @@ figcaption {
 .text_box{
   height: 3.76rem;
   padding: .27rem 0.89rem;
-  transition: all 0.5s;  
+  transition: all 0.5s ease-in-out;  
 }
 
 .title_box{
@@ -665,13 +792,49 @@ figcaption {
 
 figure img{
   opacity: .1;
-  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s ease-in-out;
   transform: scale(1);  
 }
 
 
+/*      @media only screen and (max-width: 1024px){
+        article.item .line_icon{
+        bottom: 0;
+        padding: 0.89rem;
+        transition: all 0.5s;
+        }
+
+        article.item .text_box{
+          padding-left:4.92rem;
+          transition: all 0.5s;  
+        }
+
+        figure img{
+          opacity: 1;
+          transform: scale(1.1);
+        }
+
+        article.item:hover .line_icon{
+          transition: none;
+        }
+
+        article.item:hover .text_box{
+          transition: none;  
+        }
+
+        figure:hover img{
+          transition: none;
+        }
+
+        .hover_box{
+          opacity:1;
+        }
+      }*/
 
 
+
+
+/*//////////////////// HERO  //////////////////////*/
 /*//////////////////// HERO  //////////////////////*/
 
 .hero_home{
@@ -724,36 +887,59 @@ letter-spacing: 2px;
   margin-bottom: 9.85rem;
  }
 
-/*//////////////////// OTHER WRITINGS  //////////////////////*/
+/*      @media only screen and (max-width: 1024px){
+        .intro_home{
+          font-size: 3.04rem;
+          line-height: 3.76rem;
+        }
+      }
 
-.reflexion{
-  height: 100%;
-  width: 100%;
-  text-align: left;
-  background: #F3F3F3;
-  color: #282828;
-  position: absolute;
-  font-weight: 300;
-  font-size: 1.43rem;
-  padding: 2.32rem;
-}
+      @media only screen and (max-width: 768px){
+        .hero_home{
+          margin-bottom: 6.08rem
+          }
+        .intro_home{
+          font-size:2.32rem;
+          line-height: 3.04rem;
+          margin-bottom: 1.875rem;
+        }
 
-.reflexion_quote{
-  font-weight: 800;
-  line-height: 1.875rem;
-  margin-bottom: 2.32rem;
-}  
+        .second_par{
+          font-size: .89rem;
+          margin-bottom: 4.92rem;
+        }  
+       }
 
-.reflexion span{
-  display: block;
-  line-height: 1.875rem;
-}
+       @media only screen and (max-width: 640px){
+        .intro_home{
+          font-size:1.87rem;
+          line-height: 2.32rem;
+        }
 
-.golden_icon{
-  width: 6.08rem;
-  height: 3.76rem;
-  margin: 3.76rem auto;
-}
+        .second_par{
+          margin-bottom: 2.32rem;
+        }
+        
+        .icon_hero{
+          width: 6.08rem;
+          height: 6.08rem;
+        }
+
+        .hero_home{
+          margin-bottom: 3.04rem;
+        }  
+
+        .title_box{
+          font-size: 1.16rem;
+        }
+
+        .item{
+          margin-bottom: 1.16rem;
+        } 
+      }*/
+
+   
+  
 
 
 
@@ -864,13 +1050,14 @@ letter-spacing: 2px;
 
 
 
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
-/*////////////////////  BLOG DISPOSITION  //////////////////////*/
+
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
+/*////////////////////  PORTFOLIO AND SINGLE DISPOSITION  //////////////////////*/
 
 .left_column{
   float: left;
@@ -913,14 +1100,52 @@ letter-spacing: 2px;
 
 
 
+/*        @media only screen and (max-width: 1024px){
+          .h2_port{
+            height: 15.93rem;
+          }
+        }
 
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
-/*////////////////////  CONTAINER PAGE  //////////////////////*/
+        @media only screen and (max-width: 768px){
+          .h2_port{ 
+            height: 15.93rem;
+            margin-bottom: 1.43rem;
+            display:block;
+            width: 100%;
+          }
+
+          .h2_port:nth-child(even){
+            border-radius: 6px 6px 6px 6px;
+          }
+
+          .h2_port:nth-child(odd){
+            border-radius: 6px 6px 6px 6px;
+          }
+        }
+        
+        @media only screen and (max-width: 320px){
+            .title_box{
+              font-size: .89rem;
+            }
+
+            .h2_port{
+              height: 9.85rem;
+            }
+          }*/
+
+
+
+
+
+
+
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
+/*////////////////////  CONTAINER SINGLE  //////////////////////*/
 
 .main_clearfix:after{
     content: "";
@@ -989,8 +1214,6 @@ letter-spacing: 2px;
   letter-spacing: .5px;
 }
 
-/*//////////////////// PHOTO CONTAINER //////////////////////*/
-
 .photo_container_page{
   position: relative;
   width: 100%;
@@ -1003,6 +1226,61 @@ letter-spacing: 2px;
 .photo_container_page:last-of-type{
   margin-bottom: 0rem;
 }
+
+/*    @media only screen and (max-width: 1024px){}
+        .title_page{
+          font-size:1.875rem;
+          margin-bottom: 1.16rem;
+        }
+
+        .extract_page{
+          font-size: .89rem;
+          margin-bottom: 1.875rem;
+        }
+
+        .cont_page{
+          font-size:.89rem;
+          line-height: 1.16rem;
+          margin-bottom: 1.875rem;
+        }
+
+        .tag_page span{
+          margin-bottom: 1.16rem;
+        }
+        
+        .h2_port{
+          height: 15.93rem;
+        }
+      }
+
+
+    @media only screen and (max-width: 768px){
+      .column_text,
+      .column_photo{
+        float: none;
+        display: block;
+        width: 100%;
+      }
+
+      .column_text{
+        margin-bottom: 3.76rem;
+      }
+
+      .column_photo{
+        padding-top: 2.32rem;
+      }
+
+      .column_text{
+        margin-bottom: 1.43rem;
+      } 
+    } 
+
+    @media only screen and (max-width: 640px){
+      .column_photo{
+        padding-top: 4.92rem;
+      }
+    }*/
+
 
 
 
@@ -1018,8 +1296,8 @@ letter-spacing: 2px;
 .logo_blog_section{
   width: 15.93rem;
   height: 15.93rem;
-  background: black;
-  margin: 2.32rem auto;
+  margin: 2.32rem auto 9.85rem auto;
+
 
 }        
 
@@ -1127,16 +1405,62 @@ letter-spacing: 2px;
   font-weight: 800;
 }
 
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
-/*//////////////////// CONTACT PAGE //////////////////////*/
+
+/*            @media only screen and (max-width: 640px){
+              .title_article_blog{
+                font-size: 1.43rem;
+                line-height: 1.875rem;
+              }
+
+              .place_blog,
+              .date_blog{
+                font-size: .715rem; 
+              }
+
+              .place_blog{
+                margin-bottom: .54rem;
+              }
+
+              .article_content_blog{
+                font-size: .89rem;
+                line-height: 1.16rem;
+              }
+
+              .contact_second_par{
+                font-size: 1.16rem;
+                line-height: 1.875rem;
+                margin-bottom: 6.08rem;
+              }
+
+              .quote_blog:after,
+              .quote_blog:before{
+                color: rgba(40, 40, 40, .5);
+              }
+
+              .quote_blog{
+                font-size: 1.16rem;
+                line-height: 1.43rem;
+              }
+
+              .logo_blog_section{
+              width: 9.85rem;
+              height: 9.85rem;
+              margin: 2.32rem auto 3.76rem auto;
+            }
+           } */
 
 
+
+
+
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
+/*//////////////////// CONTACT PAGE //////////////////////*/
 
 
 .presentation_contact{
@@ -1162,7 +1486,9 @@ letter-spacing: 2px;
 }
   .contact_second_par span{
     font-weight: 800;
-    text-decoration: underline;
+    background: #282828;
+    color: #FBFBFB;
+    padding: .21rem;
   }
 
 .list_contact{
@@ -1235,22 +1561,22 @@ letter-spacing: 2px;
   } 
 
   .i_instagram{
-    background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_instagram.svg) no-repeat center;
+    background: url(http://www.noellago.com/wp-content/uploads/2017/09/icon_instagram.svg) no-repeat center;
     background-size: cover;
   }
   
   .i_behance{
-    background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_behance.svg) no-repeat center;
+    background: url(http://www.noellago.com/wp-content/uploads/2017/09/icon_behance.svg) no-repeat center;
     background-size: cover;
   }
   
   .i_spotify{
-    background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_spotify.svg) no-repeat center;
+    background: url(http://www.noellago.com/wp-content/uploads/2017/09/icon_spotify.svg) no-repeat center;
     background-size: cover;
   }
   
   .i_twitter{
-    background: url(http://localhost:8888/nlp_/wp-content/uploads/2017/09/icon_twitter-1.svg) no-repeat center;
+    background: url(http://www.noellago.com/wp-content/uploads/2017/09/icon_twitter-1.svg) no-repeat center;
     background-size: cover;
   }
   
@@ -1479,6 +1805,11 @@ letter-spacing: 2px;
   }
 
 }
+
+
+
+
+
 
 
 

@@ -7,7 +7,18 @@ Template Name: Stuff
 
 	<div class="full_wrapper">
 		<div class="main_container">
-			<h1 class="icon_hero"><img src="http://localhost:8888/nlp_/wp-content/uploads/2017/08/min_noellago_logo_black-01-1.png" alt=""></h1>
+
+		<?php
+			$args = array(
+				'post_type'		=> 'isolated_images',
+				);
+			$consulta =new WP_Query ($args);
+			if($consulta->have_posts()): while ($consulta->have_posts()): $consulta->the_post();
+		?>
+			<h1 class="logo_blog_section"><img src="<?php the_field('blog_logo') ?>" alt="blog_logo"></h1>
+
+		<?php endwhile;endif;?>
+		 <?php wp_reset_postdata(); ?>
 
 			<?php
 				$args = array(
